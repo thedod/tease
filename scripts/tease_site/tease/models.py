@@ -30,7 +30,7 @@ def entity_unescape(text):
 
 FEED_METHOD_CHOICES=(
     ('RSS/Atom','RSS/Atom'), # use feedparser on the url
-    # in the future we might have some JSON stuff here too
+    # in the future we might have some JSON stuff here too (flickr, twitter, etc.)
 )
 
 # all methods return an iterable of dict-like entries
@@ -90,16 +90,8 @@ class Teaser(models.Model):
     link=models.URLField(_('Link'),null=True,blank=True)
     teaser_list = models.ForeignKey(TeaserList,verbose_name=_('Belongs to list'),related_name='teasers',blank=False)
     sort_order=models.IntegerField(_('Drag to sort'),default=0)
-    author = models.CharField(_('Author'),max_length=256,null=True,blank=True)
-    author_link = models.URLField(_('Author link'),null=True,blank=True)
-    org = models.CharField(_('Author org'),max_length=256,null=True,blank=True)
-    org_link = models.URLField(_('Author org link'),null=True,blank=True)
     image_url = models.URLField(_('Image URL'),null=True,blank=True)
     image_width = models.IntegerField(_('Image width'),default=75)
-    title_color = models.CharField(_('Title color'),max_length=8,null=True,blank=True)
-    text_color = models.CharField(_('Text color'),max_length=8,null=True,blank=True)
-    background_color = models.CharField(_('Background color'),max_length=8,null=True,blank=True,
-            help_text=_("Pick colors. Empty field means default"))
 
     class Meta:
         verbose_name = _('Teaser')

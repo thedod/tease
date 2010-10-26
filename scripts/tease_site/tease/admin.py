@@ -7,16 +7,10 @@ from django.utils.translation import ugettext_lazy as _
 class TeaserAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
-            'fields': ('title','description','teaser_list',
-                       'author','org')
+            'fields': ('title','link','description','teaser_list')
         }),
         (_('Design'), {
-            'classes': ('ltr-field',),
-            'fields': ('image_url', 'image_width', 'title_color','text_color','background_color')
-        }),
-        (_('Links'), {
-            'classes': ('ltr-field',),
-            'fields': ('link','author_link','org_link')
+            'fields': ('image_url', 'image_width')
         }),
     )
     list_display=('__unicode__','teaser_list','author','org')
@@ -29,8 +23,9 @@ class TeaserAdmin(admin.ModelAdmin):
         }
         js=('js/jquery.js',
             'js/ui.core.js',
-            'js/jpicker-1.1.2.js',
-            'js/pickerize.js',
+            # Not used at the moment. For color-picker
+            #'js/jpicker-1.1.2.js',
+            #'js/pickerize.js',
             'js/teaser-list-back-link.js')
 
 admin.site.register(Teaser,TeaserAdmin)
