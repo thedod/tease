@@ -1,0 +1,2 @@
+.ltr-field input { direction: ltr }
+.form-row { overflow:visible !important } /* tweak for jpicker */

@@ -1,0 +1,19 @@
+{% extends 'openid_consumer/openid_consumer_base.html' %}
+{% load i18n %}
+
+
+{% block title %}
+
+{% trans "OpenID failed" %}
+
+{% endblock %}
+
+{% block content %}
+<div style="direction:ltr">
+
+<h3>{% trans "OpenID failed" %}:</h3>
+
+<p class="page-content">{{ message|escape }}</p>
+<h3><a href="{% url login %}">Try again</a></h3>
+</div>
+{% endblock %}

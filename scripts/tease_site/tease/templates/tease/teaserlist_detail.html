@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+     {% trans "Dashboard" %}: {{ object }}
+{% endblock %}
+{% block content %}
+    <p>
+        [<a href="{% url teaserlists %}">{% trans "Dashboard" %}</a>]
+        [<a href="{% url admin:tease_teaserlist_change object.id %}">{% trans "Edit/Reorder" %}</a>]
+        {% if object.has_feed %}
+            [<a href="{% url teaserlist-load-feed object.slug %}">{% trans "Reload from feed" %}</a>]
+        {% endif %}
+    </p>
+    <div class="teaserlist tl-{{ object.slug }}">
+        {%if object.link %}
+            <h2 class="teaserlist-header"><a href="{{ object.link }}">{{ object }}</a></h2>
+        {% else %}
+            <h2 class="teaserlist-header">{{ object }}</h2>
+        {% endif %}
+        {% for teaser in object.teasers.all %}
+            <table border="0" class="teaser {% if forloop.last %} last-teaser{% endif %}">
+              <tr{% if teaser.background_color %} style="background-color:#{{teaser.background_color}}"{% endif %}>
+                {% if teaser.image_url %}
+                  <td align="center" valign="top" style="padding:16px 0 0 8px">
+                      <img width="{{teaser.image_width}}" src="{{teaser.image_url}}"/>
+                  </td>
+                {% endif %}
+                <td align="right" valign="top"{% if teaser.background_color %} style="padding:2px 8px"{% endif %}>
+                {% if teaser.link %}
+                    <div class="teaser-header"><a href="{{ teaser.link }}"{% if teaser.title_color %} style="color:#{{teaser.title_color}}"{% endif %}>{{ teaser.title }}</a></div>
+                {% else %}
+                    <div class="teaser-header"{% if teaser.title_color %} style="color:#{{teaser.title_color}}"{% endif %}>{{ teaser.title }}</div>
+                {% endif %}
+                <div class="credit">
+                    {% if teaser.author %}
+                        {% if teaser.author_link %}
+                            <a target="_blank" href="{{teaser.author_link}}">{{teaser.author}}</a>
+                        {% else %}
+                            {{teaser.author}}
+                        {% endif %}
+                    {% endif %}
+                    {% if teaser.org %}
+                        {% if teaser.author %}|{% endif %}
+                        {% if teaser.org_link %}
+                            <a target="_blank" href="{{teaser.org_link}}">{{teaser.org}}</a>
+                        {% else %}
+                            {{teaser.org}}
+                        {% endif %}
+                    {% endif %}
+                </div>
+                {% for dupe in teaser.get_duplicates %}
+                    {% if forloop.first %}<h5>{% trans 'Duplicate items at' %}:{% endif %}
+                    <a target="_blank" href="{% url admin:tease_teaser_change dupe.id %}">{{ dupe.title }}</a>
+                    (<a target="_blank" href="{% url teaserlist dupe.teaser_list.slug %}">{{ dupe.teaser_list.title }}</a>)
+                    {% if forloop.last %}</h5>{% endif %}
+                {% endfor %}
+                <div class="teaser-content"{% if teaser.text_color %} style="color:#{{teaser.text_color}}"{% endif %}>{{ teaser.description|safe }}</div>
+                <div class="clear-floats more-link">
+                    [<a href="{% url admin:tease_teaser_change teaser.id %}">{% trans "Edit" %}</a>]
+                </div>
+                </td>
+              </tr>
+            </table>
+        {% endfor %}
+    </div>
+{% endblock %}

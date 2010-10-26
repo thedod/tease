@@ -1,0 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+{% load i18n %}
+<head>
+    <title>{% block title %}It's All Lies{% endblock %}</title>
+    <link rel="stylesheet" href="{{ MEDIA_URL }}style.css" />
+    {% block extrahead %}{% endblock %}
+</head>
+ <body>
+  <div{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+   {% block content %}This looks like a bug :({% endblock %}
+  </div>
+ </body>
+</html>

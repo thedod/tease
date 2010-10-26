@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {{ object }}
+{% endblock %}
+{% block content %}
+    {% if object.pic %}
+        <img {% with object.pic.get_pagepic_size as sz %}width="{{ sz.0 }}" height="{{ sz.1 }}"{% endwith %}
+             class="imageend no-border" src="{{ object.pic.get_pagepic_url }}"/>
+    {% endif %}
+    <br/><!-- explorer needs this -->
+    <h3>{{ object }}</h3>
+    <div class="page-content">
+        {{ object.description|safe }}
+    </div>
+{% endblock %}

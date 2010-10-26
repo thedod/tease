@@ -1,0 +1,25 @@
+### begin myteasesite django
+    alias /myteasesite/media/ /var/www/myteasesite/media/
+    <Directory /var/www/myteasesite/media/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+
+    WSGIScriptAlias /test /var/www/myteasesite/scripts/test.wsgi
+    WSGIProcessGroup wtest
+    WSGIDaemonProcess wtest processes=2 threads=15 display-name=%{GROUP}
+    <Files /var/www/myteasesite/scripts/test.wsgi>
+        Order allow,deny
+        Allow from all
+    </Files>
+
+    WSGIScriptAlias /myteasesite /var/www/myteasesite/scripts/app.wsgi
+    WSGIProcessGroup myteasesite
+    WSGIDaemonProcess myteasesite processes=2 threads=15 display-name=%{GROUP}
+    <Files /var/www/myteasesite/scripts/app.wsgi>
+        Order allow,deny
+        Allow from all
+    </Files>
+
+### end myteasesite django
+

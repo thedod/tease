@@ -1,0 +1,8 @@
+{% extends 'socialauth/socialauth_base.html' %}
+
+{% block main_content %}
+<div class="page-content">
+You have signed in as <a href="{% url socialauth_editprofile %}">{{ user }}</a>.<br/>
+<a href="{% url socialauth_social_logout %}">Logout</a>
+</div>
+{% endblock %}

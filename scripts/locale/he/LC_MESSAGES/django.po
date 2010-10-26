@@ -1,0 +1,653 @@
+# It's All Lies
+# Copyright (C) 1948-2112
+# This file is distributed under the same license as the alllies package.
+# FIRST AUTHOR <David@Ben.Gurion>, 1948
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-07-11 18:54+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: alllies_homepage/filebrowser/fields.py:58
+#, python-format
+msgid "Extension %(ext)s is not allowed. Only %(allowed)s is allowed."
+msgstr "הסיומת %(ext)s אסורה. מותרות רק הסיומות %(allowed)s"
+
+#: alllies_homepage/filebrowser/forms.py:26
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:63
+msgid "Name"
+msgstr "שם"
+
+#: alllies_homepage/filebrowser/forms.py:26
+#: alllies_homepage/filebrowser/forms.py:32
+#: alllies_homepage/filebrowser/forms.py:49
+#: alllies_homepage/filebrowser/forms.py:55
+msgid "Only letters, numbers, underscores, spaces and hyphens are allowed."
+msgstr "מותר להשתמש רק באותיות באנגלית, ספרות, רווחים, מקפים ומקפים תחתונים."
+
+#: alllies_homepage/filebrowser/forms.py:35
+#: alllies_homepage/filebrowser/forms.py:58
+msgid "The Folder already exists."
+msgstr "התיקיה כבר קיימת."
+
+#: alllies_homepage/filebrowser/forms.py:49
+msgid "New Name"
+msgstr "שם חדש"
+
+#: alllies_homepage/filebrowser/forms.py:60
+msgid "The File already exists."
+msgstr "הקובץ כבר קיים."
+
+#: alllies_homepage/filebrowser/forms.py:88
+msgid "File"
+msgstr "קובץ"
+
+#: alllies_homepage/filebrowser/forms.py:89
+msgid "Use Image Generator"
+msgstr ""
+
+#: alllies_homepage/filebrowser/forms.py:98
+msgid "File already exists."
+msgstr "הקובץ כבר קיים."
+
+#: alllies_homepage/filebrowser/forms.py:104
+msgid "Filename is not allowed."
+msgstr "שם קובץ לא חוקי."
+
+#: alllies_homepage/filebrowser/forms.py:109
+msgid "File extension is not allowed."
+msgstr "סיומת אסורה."
+
+#: alllies_homepage/filebrowser/forms.py:114
+msgid "Filesize exceeds allowed Upload Size."
+msgstr "קובץ גדול מדי."
+
+#: alllies_homepage/filebrowser/settings.py:119
+msgid "Folder"
+msgstr "תיקיה"
+
+#: alllies_homepage/filebrowser/settings.py:120
+msgid "Image"
+msgstr "תמונה"
+
+#: alllies_homepage/filebrowser/settings.py:121
+msgid "Video"
+msgstr "וידאו"
+
+#: alllies_homepage/filebrowser/settings.py:122
+msgid "Document"
+msgstr "מסמך"
+
+#: alllies_homepage/filebrowser/settings.py:123
+msgid "Audio"
+msgstr "אודיו"
+
+#: alllies_homepage/filebrowser/settings.py:124
+msgid "Code"
+msgstr ""
+
+#: alllies_homepage/filebrowser/views.py:56
+#: alllies_homepage/filebrowser/views.py:166
+#: alllies_homepage/filebrowser/views.py:225
+#: alllies_homepage/filebrowser/views.py:287
+#: alllies_homepage/filebrowser/views.py:369
+#: alllies_homepage/filebrowser/views.py:430
+msgid "The requested Folder does not exist."
+msgstr "תיקיה לא קיימת."
+
+#: alllies_homepage/filebrowser/views.py:60
+msgid "Error finding Upload-Folder. Maybe it does not exist?"
+msgstr ""
+
+#: alllies_homepage/filebrowser/views.py:143
+#: alllies_homepage/filebrowser/templates/filebrowser/append.html:5
+#: alllies_homepage/filebrowser/templates/filebrowser/append.html:7
+#: alllies_homepage/filebrowser/templates/filebrowser/include/breadcrumbs.html:8
+#: alllies_homepage/filebrowser/templates/filebrowser/include/breadcrumbs.html:10
+msgid "FileBrowser"
+msgstr "מנהל הקבצים"
+
+#: alllies_homepage/filebrowser/views.py:184
+#, python-format
+msgid "The Folder %s was successfully created."
+msgstr "התיקיה %s נוצרה בהצלחה"
+
+#: alllies_homepage/filebrowser/views.py:193
+msgid "Permission denied."
+msgstr "אין הרשאות לביצוע הפעולה."
+
+#: alllies_homepage/filebrowser/views.py:195
+msgid "Error creating folder."
+msgstr "בעיה ביצירת התיקיה."
+
+#: alllies_homepage/filebrowser/views.py:202
+#: alllies_homepage/filebrowser/views.py:205
+#: alllies_homepage/filebrowser/templates/filebrowser/index.html:48
+msgid "New Folder"
+msgstr "תיקיה חדשה"
+
+#: alllies_homepage/filebrowser/views.py:250
+msgid "Upload successful."
+msgstr "העלאת הקבצים הסתיימה בהצלחה."
+
+#: alllies_homepage/filebrowser/views.py:263
+#: alllies_homepage/filebrowser/templates/filebrowser/index.html:49
+#: alllies_homepage/filebrowser/templates/filebrowser/upload.html:69
+msgid "Upload"
+msgstr "העלאת קבצים"
+
+#: alllies_homepage/filebrowser/views.py:264
+msgid "Select files to upload"
+msgstr "בחירת קובץ להעלאה"
+
+#: alllies_homepage/filebrowser/views.py:289
+#: alllies_homepage/filebrowser/views.py:371
+#: alllies_homepage/filebrowser/views.py:432
+msgid "The requested File does not exist."
+msgstr "הקובץ לא קיים."
+
+#: alllies_homepage/filebrowser/views.py:312
+#, python-format
+msgid "The file %s was successfully deleted."
+msgstr "הקובץ %s נמחק בהצלחה."
+
+#: alllies_homepage/filebrowser/views.py:328
+#, python-format
+msgid "The folder %s was successfully deleted."
+msgstr "התיקיה %s נמחקה בהצלחה."
+
+#: alllies_homepage/filebrowser/views.py:398
+msgid "Renaming was successful."
+msgstr "שינוי השם התבצע בהצלחה."
+
+#: alllies_homepage/filebrowser/views.py:403
+msgid "Error."
+msgstr "שגיאה."
+
+#: alllies_homepage/filebrowser/views.py:411
+#, python-format
+msgid "Rename \"%s\""
+msgstr "שינוי שם \"%s\""
+
+#: alllies_homepage/filebrowser/views.py:414
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:86
+msgid "Rename"
+msgstr "שינוי שם"
+
+#: alllies_homepage/filebrowser/views.py:440
+#: alllies_homepage/filebrowser/views.py:443
+#, python-format
+msgid "Versions for \"%s\""
+msgstr "גירסאות עבור \"%s\""
+
+#: alllies_homepage/filebrowser/templates/filebrowser/makedir.html:24
+#: alllies_homepage/filebrowser/templates/filebrowser/rename.html:25
+msgid "Please correct the following errors."
+msgstr "נא לתקן את השגיאות הבאות."
+
+#: alllies_homepage/filebrowser/templates/filebrowser/makedir.html:33
+#: alllies_homepage/filebrowser/templates/filebrowser/upload.html:62
+msgid ""
+"The Name will be converted to lowercase. Spaces will be replaced with "
+"underscores."
+msgstr "אותיות גדולות יוחלפו בקטנות. רווחים יוחלפו במקפים תחתונים."
+
+#: alllies_homepage/filebrowser/templates/filebrowser/makedir.html:40
+#: alllies_homepage/filebrowser/templates/filebrowser/rename.html:36
+msgid "Submit"
+msgstr "שליחה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/upload.html:46
+msgid "Help"
+msgstr "עזרה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/upload.html:50
+msgid "Allowed"
+msgstr "מותר"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/upload.html:56
+msgid "Max. Filesize"
+msgstr "גודל מירבי"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:66
+msgid "Image Version"
+msgstr "גירסת תמונה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:69
+msgid "Debug"
+msgstr ""
+
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:83
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:95
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:107
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:11
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:23
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:35
+msgid "Select"
+msgstr "בחירה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:118
+msgid "Width"
+msgstr "רוחב"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/versions.html:119
+msgid "Height"
+msgstr "גובה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/breadcrumbs.html:5
+#: templates/500.html:4 templates/admin/base.html:70
+msgid "Home"
+msgstr "בית"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:51
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:68
+msgid "View Image"
+msgstr "צפיה בתמונה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:66
+#, fuzzy
+msgid "Preview"
+msgstr "צפיה בעמוד"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:73
+msgid "Versions"
+msgstr "גירסאות"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:93
+msgid "Are you sure you want to delete this file?"
+msgstr "את/ה בטוח שאת/ה רוצה למחוק את הקובץ?"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:93
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:96
+msgid "Delete File"
+msgstr "מחיקת קובץ"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:96
+msgid "Are you sure you want to delete this Folder?"
+msgstr "את/ה בטוח שאת/ה רוצה למחוק את התיקיה?"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filelisting.html:96
+msgid "Delete Folder"
+msgstr "מחיקת תיקיה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:3
+msgid "Filter"
+msgstr "סינון"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:9
+msgid "By Date"
+msgstr "לפי תאריך"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:11
+msgid "Any Date"
+msgstr "תאריך כלשהוא"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:13
+msgid "Today"
+msgstr "היום"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:15
+msgid "Past 7 days"
+msgstr "7 ימים אחרונים"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:17
+msgid "Past 30 days"
+msgstr "30 יום"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:19
+msgid "This year"
+msgstr "השנה"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:27
+msgid "By Type"
+msgstr "לפי סוג"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/filter.html:29
+msgid "All"
+msgstr "הכל"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/paginator.html:5
+msgid "No Items Found"
+msgstr "לא מצאתי כלום"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/paginator.html:11
+#, python-format
+msgid "%(counter)s Item"
+msgid_plural "%(counter)s Items"
+msgstr[0] "%(counter)s קובץ/תיקיה"
+msgstr[1] "%(counter)s קבצים/תיקיות"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/paginator.html:26
+msgid "No Items"
+msgstr "אין כאן כלום"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:3
+#, python-format
+msgid "1 result"
+msgid_plural "%(counter)s results"
+msgstr[0] "תוצאה אחת"
+msgstr[1] "%(counter)s תוצאות"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:4
+#: alllies_homepage/filebrowser/templates/filebrowser/include/toolbar.html:19
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "סה\"כ: %(full_result_count)s"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:5
+msgid "Clear Restrictions"
+msgstr "ניקוי מאפייני החיפוש"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:7
+#: alllies_homepage/filebrowser/templates/filebrowser/include/toolbar.html:16
+msgid "Search"
+msgstr "חיפוש"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:19
+msgid "Go"
+msgstr "חפש"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:24
+#, python-format
+msgid "%(counter)s Item found"
+msgid_plural "%(counter)s Items found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/search.html:25
+#, python-format
+msgid "%(counter)s Item total"
+msgid_plural "%(counter)s Items total"
+msgstr[0] "נמצא/ה %(counter)s קובץ/תיקיה"
+msgstr[1] "נמצאו %(counter)s קבצים/תיקיות"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:9
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:10
+msgid "Type"
+msgstr "סוג"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:12
+msgid "Thumbnail"
+msgstr "צלמית"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:14
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:15
+msgid "Filename"
+msgstr "שם"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:17
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:18
+msgid "Size"
+msgstr "גודל"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:20
+#: alllies_homepage/filebrowser/templates/filebrowser/include/tableheader.html:21
+msgid "Date"
+msgstr "תאריך"
+
+#: alllies_homepage/filebrowser/templates/filebrowser/include/toolbar.html:19
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "תוצאה אחת"
+msgstr[1] "%(counter)s תוצאות"
+
+#: alllies_homepage/openid_consumer/views.py:96
+msgid "i-names are not supported"
+msgstr ""
+
+#: alllies_homepage/openid_consumer/views.py:103
+msgid "The OpenID was invalid"
+msgstr ""
+
+#: alllies_homepage/openid_consumer/views.py:163
+msgid "The request was cancelled"
+msgstr ""
+
+#: alllies_homepage/openid_consumer/views.py:167
+msgid "Setup needed"
+msgstr ""
+
+#: alllies_homepage/openid_consumer/templates/openid_consumer/failure.html:7
+#: alllies_homepage/openid_consumer/templates/openid_consumer/failure.html:14
+msgid "OpenID failed"
+msgstr ""
+
+#: alllies_homepage/openid_consumer/templates/openid_consumer/signin.html:12
+#: alllies_homepage/openid_consumer/templates/openid_consumer/signin.html:27
+msgid "Sign in with your OpenID"
+msgstr ""
+
+#: alllies_homepage/openid_consumer/templates/openid_consumer/signin.html:15
+msgid "Sign in"
+msgstr ""
+
+#: alllies_homepage/tease/admin.py:13
+msgid "Design"
+msgstr "עיצוב"
+
+#: alllies_homepage/tease/admin.py:17
+msgid "Links"
+msgstr "קישורים"
+
+#: alllies_homepage/tease/admin.py:68
+msgid "Advanced options"
+msgstr "אפשרויות מתקדמות"
+
+#: alllies_homepage/tease/models.py:45 alllies_homepage/tease/models.py:88
+msgid "Title"
+msgstr "כותרת"
+
+#: alllies_homepage/tease/models.py:46
+msgid "Slug"
+msgstr "סלאג"
+
+#: alllies_homepage/tease/models.py:47
+msgid ""
+"Unique identifier for URL. Only letters, digits, and _. e.g. "
+"international_news_2010 or about"
+msgstr ""
+"מזהה יחודי לצורך קישור (URL). אותיות באנגלית, ספרות, או '_'. למשל opinions "
+"או international_news_2010"
+
+#: alllies_homepage/tease/models.py:48 alllies_homepage/tease/models.py:90
+msgid "Link"
+msgstr "קישור"
+
+#: alllies_homepage/tease/models.py:49
+msgid "Feed url"
+msgstr ""
+
+#: alllies_homepage/tease/models.py:50
+msgid "Optional url of automatic source for teaser"
+msgstr "קישור למקור RSS, Atom, JSON, וכו'"
+
+#: alllies_homepage/tease/models.py:51
+msgid "Feed method"
+msgstr ""
+
+#: alllies_homepage/tease/models.py:53
+msgid "If feed url is present - format of the feed"
+msgstr "פורמט ה-feed"
+
+#: alllies_homepage/tease/models.py:56
+msgid "Teaser list"
+msgstr "רשימת הפניות"
+
+#: alllies_homepage/tease/models.py:57
+msgid "Teaser lists"
+msgstr "רשימות הפניות"
+
+#: alllies_homepage/tease/models.py:89
+msgid "Description"
+msgstr "תוכן"
+
+#: alllies_homepage/tease/models.py:91
+msgid "Belongs to list"
+msgstr "שיוך לרשימה"
+
+#: alllies_homepage/tease/models.py:92
+msgid "Drag to sort"
+msgstr "אפשר לגרור הפניות לשינוי סדר, או ללחוץ על [עריכה] משמאל לאחת ההפניות"
+
+#: alllies_homepage/tease/models.py:93
+msgid "Author"
+msgstr "מחבר/ת"
+
+#: alllies_homepage/tease/models.py:94
+msgid "Author link"
+msgstr "קישור למחבר/ת"
+
+#: alllies_homepage/tease/models.py:95
+msgid "Author org"
+msgstr "ארגון"
+
+#: alllies_homepage/tease/models.py:96
+msgid "Author org link"
+msgstr "קישור לארגון"
+
+#: alllies_homepage/tease/models.py:97
+msgid "Image URL"
+msgstr "כתובת תמונה"
+
+#: alllies_homepage/tease/models.py:98
+msgid "Image width"
+msgstr "רוחב תמונה"
+
+#: alllies_homepage/tease/models.py:99
+msgid "Title color"
+msgstr "צבע כותרת"
+
+#: alllies_homepage/tease/models.py:100
+msgid "Text color"
+msgstr "צבע טקסט"
+
+#: alllies_homepage/tease/models.py:101
+msgid "Background color"
+msgstr "צבע רקע"
+
+#: alllies_homepage/tease/models.py:102
+msgid "Pick colors. Empty field means default"
+msgstr ""
+"אפשר להשאיר שדה צבע ריק, ואז המערכת תשתמש בברירת המחדל של המדור (הצבע של שדה "
+"ריק הוא לפעמים כתום. זה חסר משמעות)"
+
+#: alllies_homepage/tease/models.py:105
+msgid "Teaser"
+msgstr "הפניה"
+
+#: alllies_homepage/tease/models.py:106
+msgid "Teasers"
+msgstr "הפניות"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_detail.html:4
+#: alllies_homepage/tease/templates/tease/teaserlist_detail.html:8
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:3
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:5
+#: templates/admin/base.html:33
+msgid "Dashboard"
+msgstr "לוח בקרה"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_detail.html:9
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:24
+msgid "Edit/Reorder"
+msgstr "עריכה / שינוי סדר"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_detail.html:11
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:26
+msgid "Reload from feed"
+msgstr "טעינה מחדש"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_detail.html:52
+msgid "Duplicate items at"
+msgstr "כבר מופיע כאן"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_detail.html:59
+msgid "Edit"
+msgstr "עריכה"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:7
+msgid "The matrix"
+msgstr "מטריצת השיוכים"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:8
+msgid "Edit main item"
+msgstr "עריכת אייטם ראשי"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:9
+msgid "Preview homepage"
+msgstr "צפיה בעמוד"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:10
+msgid "Publish"
+msgstr "הוצאה לאור"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:13
+msgid "File manager"
+msgstr "ניהול קבצים"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:13
+msgid "upload header images"
+msgstr "העלאת תמונות האדר"
+
+#: alllies_homepage/tease/templates/tease/teaserlist_list.html:14
+msgid "Publish header images"
+msgstr "הוצאה לאור של תמונות האדר"
+
+#: alllies_homepage/tinymce/views.py:67
+msgid "Error running spellchecker"
+msgstr "תקלה בהפעלת בדיקת האיות"
+
+#: templates/404.html:4 templates/404.html.py:8
+msgid "Page not found"
+msgstr "הדף לא נמצא"
+
+#: templates/404.html:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr "מצטערים, באת ביום לא טוב. לא מצאנו את השקר שחיפשת."
+
+#: templates/500.html:4
+msgid "Server error"
+msgstr "שגיאת מערכת"
+
+#: templates/500.html:6
+msgid "Server error (500)"
+msgstr "שגיאת מערכת (500)"
+
+#: templates/500.html:9
+msgid "Server Error <em>(500)</em>"
+msgstr "שגיאת מערכת (<em>500</em>, שזה מספר ש<em>מבהיל</em> מנהלי אתרים)"
+
+#: templates/500.html:10
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr "יש תקלה, אבל אין מה לדאוג. הכל בשליטה.תשתו הרבה מים."
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "שלום"
+
+#: templates/admin/base.html:28
+msgid "Who's"
+msgstr "מי זה"
+
+#: templates/admin/base.html:38
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: templates/admin/base.html:46
+msgid "Change password"
+msgstr "שינוי סיסמה"
+
+#: templates/admin/base.html:53
+msgid "Log out"
+msgstr "התנתקות"

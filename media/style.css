@@ -1,0 +1,47 @@
+body { font-family: arial, georgia, helvetica, sans-serif }
+a { color: #7f7fff; text-decoration: none; }
+a:visited { color: #3f3f7f; text-decoration: none; }
+a:hover { color: #00003f; text-decoration: underline; }
+a img { border: none; }
+
+address { font-style: normal !important ; font-size: 0.8em; line-height: 1em }
+address a { color: #3f3fcf !important }
+
+.clear-floats { clear: both }
+.top_menu { clear:both; margin-bottom:4px; padding: 0 ; text-align:right; position:relative; top:-4px; right:4px }
+.menu-item {
+    padding:0 8px;
+    vertical-align:middle;
+    font-size: 13px;
+    font-weight:bold;
+    border-left: solid #bf282d 3px
+}
+.menu-item a { color:#000000; text-decoration:none }
+.menu-item a:hover { color:#7f7f7f }
+.main-item, .teaserlist { font-size: .85em }
+.main-item { width:575px; padding:4px; line-height:1.4em }
+.teaserlist { padding:0 4px 8px 8px } /* width is default. tl-<slug> overrides for specific teaserlist */
+.teaserlist-header { border-bottom: solid #666666 8px; padding: 4px 0 4px 4px; font-weight:bold; font-size:1.25em; text-align:right }
+.teaserlist-header a, .teaserlist-header a:visited { color: #c22631 }
+.teaser-header { padding: 12px 0 2px 0; font-weight:bold; font-size:1.05em }
+.teaser-header a, .teaser-header a:visited { color: #b42f34 }
+/* Tweak to remove "shonot" header. Only works when teaserlist has a link ;) */
+.tl-misc_right .teaserlist-header a, .tl-misc_center .teaserlist-header a, .tl-misc_left .teaserlist-header a { display: none }
+.tl-opinions, .tl-misc_right { width: 300px }
+.tl-news, tl-misc_center { width: 350px }
+.tl-newswire, .tl-hot_tags, .tl-misc_left { width: 200px }
+.tl-newswire { background-color: #e6dcd2; color:#000000 }
+.tl-newswire .teaser-header a, .tl-newswire .teaser-header a:visited { color: #000000; font-size: 0.8em }
+.tl-hot_tags .teaser-header a, .tl-hot_tags .teaser-header a:visited { color: #0000ff; font-size: 0.8em }
+.teaser { padding: 2px 4px; border-bottom: solid #998779 1px }
+table.teaser { width:100% }
+.last-teaser { border: none !important }
+.teaser-content { padding:  0; margin:0; font-size:0.9em; line-height: 1.4em }
+.teaser-content p { padding: 4px 0; margin:0 }
+.tl-newswire .teaser-content p { color: #a83133 }
+.teaser-content img { border: none; text-align: none !important }
+.tl-newswire .teaser-content a, .tl-newswire .teaser-content a:visited { color: #000000 }
+.more-link { text-align: left; margin: 4px }
+.credit { font-size: .7em }
+.search_input { margin: 0; padding: 0; color: #5F5F5F; font: normal 1.0em Georgia, "Times New Roman", Times, serif; border: 1px solid #999; }
+.search_input:focus { color:#000 }
