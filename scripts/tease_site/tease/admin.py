@@ -13,13 +13,13 @@ class TeaserAdmin(admin.ModelAdmin):
             'fields': ('image_url', 'image_width')
         }),
     )
-    list_display=('__unicode__','teaser_list','author','org')
+    list_display=('__unicode__','teaser_list')
     list_editable=('teaser_list',)
     list_filter=('teaser_list',)
-    search_fields = ('title','description','author','org','link')
+    search_fields = ('title','description')
     class Media:
         css = {
-            'all': ('admin-extra.css','jPicker-1.1.2.css')
+            'all': ('admin-extra.css',) # 'jPicker-1.1.2.css')
         }
         js=('js/jquery.js',
             'js/ui.core.js',
@@ -34,8 +34,7 @@ admin.site.register(Teaser,TeaserAdmin)
 class TeaserInline(admin.TabularInline):
     model = Teaser
     extra = 3
-    exclude = ('description','link','author','author_link','org','org_link','image_url','image_width',
-               'title_color','text_color','background_color')
+    exclude = ('description','link','image_url','image_width')
     class Media:
         css = {
             'all': ('admin-extra.css',)
