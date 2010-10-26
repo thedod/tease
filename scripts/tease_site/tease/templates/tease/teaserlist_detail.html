@@ -25,7 +25,7 @@
                       <img width="{{teaser.image_width}}" src="{{teaser.image_url}}"/>
                   </td>
                 {% endif %}
-                <td align="right" valign="top"{% if teaser.background_color %} style="padding:2px 8px"{% endif %}>
+                <td align="left" valign="top"{% if teaser.background_color %} style="padding:2px 8px"{% endif %}>
                 {% if teaser.link %}
                     <div class="teaser-header"><a href="{{ teaser.link }}"{% if teaser.title_color %} style="color:#{{teaser.title_color}}"{% endif %}>{{ teaser.title }}</a></div>
                 {% else %}
