@@ -1,0 +1,17 @@
+<form method="get" id="searchform" action="http://alllies.org/blog/" style="margin:0">
+  <table border="0" class="top_menu">
+    <tr>
+      <!-- link target is _blank for the example site,
+           because it's not a "real" navigation menu - only external links -->
+      {% for teaser in TEASERLISTS.top_menu.teasers.all %}
+          <td class="menu-item{% if forloop.last %} last-teaser{% endif %}">
+              {%if teaser.link %}
+                  <a target="_blank" href="{{ teaser.link }}">{{ teaser.title }}</a>
+              {% else %}
+                  {{ teaser.title }}
+              {% endif %}
+          </td>
+      {% endfor %}
+    </tr>
+  </table>
+</form>

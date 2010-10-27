@@ -1,2 +1,0 @@
-#!/bin/sh
-echo "select * from django_admin_log" | mysql tease_site -u tease_site -p | less

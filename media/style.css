@@ -14,18 +14,18 @@ address a { color: #3f3fcf !important }
     vertical-align:middle;
     font-size: 13px;
     font-weight:bold;
-    border-left: solid #bf282d 3px
+    border-right: solid #ccc 1px
 }
 .menu-item a { color:#000000; text-decoration:none }
 .menu-item a:hover { color:#7f7f7f }
 .main-item, .teaserlist { font-size: .85em }
 .main-item { border: solid #ccc 1px; padding:4px }
 .teaserlist { padding:0 4px 8px 8px } /* width is default. tl-<slug> overrides for specific teaserlist */
-.teaserlist-header { background-color:#000; color:#fff; padding: 4px 0; font-weight:bold; font-size:1.25em; text-align:center }
+.teaserlist-header { background-color:#777; color:#fff; padding: 4px 0; font-weight:bold; font-size:1.25em; text-align:center }
 .teaserlist-header a, .teaserlist-header a:visited { color: #c22631 }
 .teaser-header { padding: 12px 0 2px 0; font-weight:bold; font-size:1.05em }
 .teaser-header a, .teaser-header a:visited { color: #b42f34 }
-.tl-fun, tl-misc_center { width: 350px }
+.tl-fun { width: 350px }
 .teaser { padding: 2px 4px; border-bottom: solid #998779 1px }
 table.teaser { width:100% }
 .last-teaser { border: none !important }

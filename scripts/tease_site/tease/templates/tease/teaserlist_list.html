@@ -3,16 +3,16 @@
 {% block title %}{% trans "Dashboard" %}{% endblock %}
 {% block content %}
 <h3>{% trans "Dashboard" %}</h3>
-<form target="_blank" method="POST" action="/publish.cgi">
+<div>
 [<a href="{% url admin:tease_teaser_changelist %}">{% trans "The matrix" %}</a>]
 [<a href="{% url admin:flatpages_flatpage_change 1 %}">{% trans "Edit main item" %}</a>]
-[<a target="_blank" href="..">{% trans "Preview homepage" %}</a>]
-<input type="Submit" value="{% trans "Publish" %}">
-</form>
-<form target="_blank" method="POST" action="/getheaders.cgi">
-[<a target="_blank" href="{% url fb_browse %}">{% trans "File manager" %}</a> ({% trans "upload header images" %}) ]
-<input type="Submit" value="{% trans "Publish header images" %}">
-</form>
+[<a href="..">Homepage</a>]
+</div>
+<!--
+<div>
+[<a target="_blank" href="{% url fb_browse %}">{% trans "File manager" %}</a> ({% trans "upload header image etc." %}) ]
+</div>
+-->
 <ul>
 {% for object in object_list %}
     {% spaceless %}
