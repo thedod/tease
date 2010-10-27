@@ -1,3 +1,4 @@
 scripts/tease_site/local_settings.py
 scripts/tease_site/social_settings.py
+scripts/templates/teaseplates
 *.pyc

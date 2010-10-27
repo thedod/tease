@@ -29,4 +29,3 @@ LOCK TABLES `tease_teaserlist` WRITE;
 INSERT INTO `tease_teaserlist` VALUES (4,'Instructables','instructables','http://www.instructables.com/member/thedod/','http://www.instructables.com/member/thedod/rss.xml?show=instructable','RSS/Atom'),(2,'Work','work','','','RSS/Atom'),(3,'Fun','fun','','','RSS/Atom'),(5,'Kitteh','kitteh','http://friendfeed.com/kitteh','http://friendfeed.com/kitteh?format=atom','RSS/Atom'),(6,'Slideshare','slideshare','http://www.slideshare.net/thedod','http://www.slideshare.net/rss/user/thedod','RSS/Atom'),(7,'Top menu','top_menu','','','RSS/Atom');
 /*!40000 ALTER TABLE `tease_teaserlist` ENABLE KEYS */;
 UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

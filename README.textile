@@ -8,16 +8,36 @@ This version is a "minimum moving parts" one, derived from "alllies.org":http://
 
 h4. Components
 
-* What the system shows to the end user are actually "Django flatpages":http://docs.djangoproject.com/en/dev/ref/contrib/flatpages/ with templates from the _teaseplates_ folder (it's under scripts/teaser_app/tease/templates, but you can copy it to scripts/templates in order to maintain your site-specific versions). These templates can access TeaserLists (see below what they are) via TEASERLISTS (supplied by the tease context_processor). E.g. @{% with TEASERLISTS.fun as object %}{% include "teaseplates/render_teaserlist.html" %}{% endwith %}@. This distribution comes with an example called homepage.html that assumes you have TeaserLists named *fun*, *work*, and *top_menu* . To get a demo site up and running, import site_specific_examples/demo_site.sql into your database (_after_ doing syncdb). The actual content of the flatpage is available to the teaseplate template as @{{ flatpage.content }}@, and is used as a free-form html component in the design (e.g. - in the demo - it's the top right youtube video).
+* What the system shows to the end user are actually "Django flatpages":http://docs.djangoproject.com/en/dev/ref/contrib/flatpages/ with templates from the _teaseplates_ folder (it's under scripts/teaser_app/tease/templates, but you can copy it to scripts/templates in order to maintain your site-specific versions). These templates can access TeaserLists (see below what they are) via TEASERLISTS (supplied by the tease context_processor). E.g. @{% with TEASERLISTS.fun as object %}{% include "teaseplates/render_teaserlist.html" %}{% endwith %}@. This distribution comes with an example of homepage.html that assumes you have TeaserLists named *fun*, *work*, and *top_menu*. To get a demo site up and running, import site_specific_examples/demo_site.sql into your database (_after_ doing syncdb). The actual content of the flatpage is available to the teaseplate template as @{{ flatpage.content }}@, and is used as a free-form html component in the design (e.g. - in the demo - it's the top right youtube video).
 
 * A *TeaserList* is a 1:many list of Teasers (see below) [each Teaser belongs to a _single_ TeaserList]. In a TeaserList's admin page, you can edit the order of Teasers via drag/drop operations. A TeaserList can optionally be associated with an RSS/ATOM feed, and then you can do a _Reload from feed_ operation from the _dashboard_ (see below) to populate it with stuff from that feed (note: it would first _delete all existing Teasers_ in the TeaserList). Usually - TeaserLists that are associated with feed are internal and not shown in actual pages. You simply reasign their Teasers to the public TeaserLists (the ones that are used in the teaseplate templates).
 
 * A *Teaser* has the following fields: Title, Link, Description (wysiwyg-editable html), image, and image-width (height is auto). In *your* version you can add other fields to the model as needed (author name+link, title color, etc.).
 
-h4. Dashboard and other loose bits of advice
+h4. Dashboard
 
 In addition to the usual django admin, there's also a link (top right) to something called _dashboard_. It shows you a list of all existing TeaserLists with links to view/edit them (or reload them from feed if they have one).
 
 When you view a TeaserList from the dashboard, each Teaser is checked whether some other teaser with the same link already appears in other TeaserLists, and you get a warning message (with link[s] to the other instance[s]) if this is the case. You will _not_ get such a warning if the other instance is in a TeaserList that is associated with a feed (because we assume that TeaserList is internal and never displayed to users).
+
+h4. Installation
+
+* scripts/site-specific-examples/app.wsgi should be copied to scripts/ and edited
+
+* scripts/site-specific-examples/apache.txt shows how to configure the site at an apache server (standard Django/wsgi stuff), but feel free to do it any way a Django server can run
+
+* Copy local_settings.py and social_settings.py from scripts/site-specific-examples/tease_site/ to scripts/tease_site/
+
+* Edit local_settings.py - it is imported by settings.py and contain all your site-specific stuff (e.g. db password). Unless you're doing something very advanced, there's no need to touch settings.py. You might want to start with @DEBUG = True@ :)
+
+* If your django is not at the root of a server (e.g. http://example.com/mysite/), you should also edit the first 4 paths at social_settings.py and chage LOGIN_URL to /mysite/login/, etc.
+
+* As mentioned above, it's a good idea to copy scripts/tease_site/tease/templates/teaseplates to scripts/templates/. This way you can change it to fit your needs, It is a good idea to without clashing with future upgrades to the software.
+
+* From scripts/tease_site/ run @./manage syncdb@ (that's standard in Django)
+
+* Login to the admin interface, go to sites, and change the single site there (example.com) to the real path (e.g. mysite.com/mytease/)
+
+* If you want to start with a demo site (i.e. populate the database with demo Teasers and TeaserList that work "out of the box" with the plain vanilla teaseplates), import scripts/site-spacific-examples/demo_site.sql into the database. Don't worry. It doesn't load to much junk. What you'll get is easily manageable from the admin. It's easy to delete too :)
 
 *Tip*: You can http-get the resulting page[s] to any static web folder (even on some _other_ domain) and only use _tease_ as a static html generator. You can have a cgi script on the target machine that does this, and link to it from the dashboard template at tease/templates/tease/teaserlist_list.html
