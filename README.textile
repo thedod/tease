@@ -2,7 +2,7 @@ h3. Tease - a semi-manual editor for home/landing pages
 
 Tease is a django-based system that helps you manually create a page (or pages) containing nicely formatted references to URLs called _teasers_. Teasers can either come from RSS/ATOM feeds or be manually created from the admin interface.
 
-Tease does not _automatically_ aggregate feeds _for_ you, but rather lets you _manually_ aggregate information from feeds (or manually) _with_ it. It's serves a similar function to the home-page / section-page editors you have at large cms systems (only without the large cms system itself).
+Tease does not _automatically_ aggregate feeds _for_ you, but rather lets you _manually_ aggregate information _with_ it. It's serves a similar function to the home-page / section-page editors you have at large cms systems (only without the large cms system itself).
 
 This version is a "minimum moving parts" one, derived from "alllies.org":http://alllies.org - where they had very specific requirements (e.g. Hebrew admin interface). Normally - you'll fork this and change things a bit to fit your needs (e.g. alllies can define various css colors for each Teaser).
 
