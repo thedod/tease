@@ -45,7 +45,7 @@ class TeaserList(models.Model):
     title = models.CharField(_('Title'),max_length=64)
     slug=models.SlugField(_('Slug'),unique=True,
             help_text=_("Unique identifier for URL. Only letters, digits, and _. e.g. international_news_2010 or about"))
-    link=models.URLField(_('Link'),null=True,blank=True)
+    link=models.URLField(_('Link'),max_length=1024,null=True,blank=True)
     feed_url=models.URLField(_('Feed url'),null=True,blank=True,
             help_text=_("Optional url of automatic source for teaser"))
     feed_method = models.CharField(_('Feed method'),max_length=23,

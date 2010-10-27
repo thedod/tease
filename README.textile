@@ -1,0 +1,23 @@
+h3. Tease - a semi-manual editor for home/landing pages
+
+Tease is a django-based system that helps you manually create a page (or pages) containing nicely formatted references to URLs called _teasers_. Teasers can either come from RSS/ATOM feeds or be manually created from the admin interface.
+
+Tease does not _automatically_ aggregate feeds _for_ you, but rather lets you _manually_ aggregate information from feeds (or manually) _with_ it. It's serves a similar function to the home-page / section-page editors you have at large cms systems (only without the large cms system itself).
+
+This version is a "minimum moving parts" one, derived from "alllies.org":http://alllies.org - where they had very specific requirements (e.g. Hebrew admin interface). Normally - you'll fork this and change things a bit to fit your needs (e.g. alllies can define various css colors for each Teaser).
+
+h4. Components
+
+* What the system shows to the end user are actually "Django flatpages":http://docs.djangoproject.com/en/dev/ref/contrib/flatpages/ with templates from the _teaseplates_ folder (it's under teaser_app/tease/templates, but you can copy it to templates in order to maintain you site-specific versions). These templates can access TeaserLists (see below what they are) via TEASERLISTS (supplied by the tease context_processor). E.g. @{% with TEASERLISTS.work as object %}{% include "teaseplates/render_teaserlist.html" %}{% endwith %}@. This distribution comes with an example called homepage.html that assumes you have teaser_lists named *fun*, *work*, and *top_menu* . To get a demo site up and running, import site_specific_examples/demo_site.sql into your database (_after_ doing syncdb). The actual content of the flatpage is available to the teaseplate template as @{{ flatpage.content }}@, and is used as a free-form html component in the design (e.g. - in the demo - it's the top right youtube video).
+
+* A *TeaserList* is a 1:many list of Teasers (see below). You can order them via drag/drop in the TeaserList's admin page. A TeaserList can optionally be associated with an RSS/ATOM feed, and then you can do a _Reload from feed_ opration to populate it with stuff from that feed (note: it would first delete all existing Teasers in the TeaserList). Usually - TeaserLists that are associated with feed are internal and not shown in actual pages. You simply reasign teasers from them to the public feeds (the ones that are used in the teaseplate templates).
+
+* A *Teaser* has the following fields: Title, Link, Description (wysiwyg-editable html), image, and image-width (height is auto). In *your* version you can add other fields to the model as needed (author name+link, title color, etc.).
+
+h4. Dashboard and other loose bits of advice
+
+In addition to the usual django admin, there's also a link (top right) to something called _dashboard_. It shows you a list of all existing TeaserLists with links to view/edit them (or reload them from feed if they have one).
+
+When you view a TeaserList from the dashboard, each Teaser is checked whether some other teaser with the same link already appears in other TeaserLists, and you get a warning message (with link[s] to the other instance[s]) if this is the case. You will _not_ get such a warning if the other instance is in a TeaserList that is associated with a feed (because we assume that TeaserList is internal and never displayed to users).
+
+*Tip*: You can http-get the resulting page[s] to any static web folder (even on some _other_ domain) and only use _tease_ as a glorified html editor :). You can have a cgi script on the target machine that does this, and link to it from the dashboard template at tease/templates/tease/teaserlist_list.html 
